@@ -1,0 +1,7 @@
+D:\CSADataReport\DBUtility\bin\Release\CSADataReport.DBUtility.dll
+D:\CSADataReport\DBUtility\bin\Release\IBatisNet.Common.dll
+D:\CSADataReport\DBUtility\bin\Release\IBatisNet.DataMapper.dll
+D:\CSADataReport\DBUtility\bin\Release\MySql.Data.dll
+D:\CSADataReport\DBUtility\bin\Release\System.Data.SQLite.DLL
+D:\CSADataReport\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
+D:\CSADataReport\DBUtility\obj\Release\CSADataReport.DBUtility.dll

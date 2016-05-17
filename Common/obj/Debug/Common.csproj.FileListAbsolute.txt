@@ -1,0 +1,17 @@
+D:\CSADataReport\Common\bin\Debug\CSADataReport.Common.dll
+D:\CSADataReport\Common\bin\Debug\CSADataReport.Common.pdb
+D:\CSADataReport\Common\bin\Debug\COM.Excel.dll
+D:\CSADataReport\Common\bin\Debug\CSADataReport.DBUtility.dll
+D:\CSADataReport\Common\bin\Debug\CSADataReport.Model.dll
+D:\CSADataReport\Common\bin\Debug\Excel.dll
+D:\CSADataReport\Common\bin\Debug\OpenSmtp.dll
+D:\CSADataReport\Common\bin\Debug\OWC10Chart.dll
+D:\CSADataReport\Common\bin\Debug\MySql.Data.dll
+D:\CSADataReport\Common\bin\Debug\System.Data.SQLite.dll
+D:\CSADataReport\Common\bin\Debug\IBatisNet.DataMapper.dll
+D:\CSADataReport\Common\bin\Debug\IBatisNet.Common.dll
+D:\CSADataReport\Common\bin\Debug\CSADataReport.DBUtility.pdb
+D:\CSADataReport\Common\bin\Debug\CSADataReport.Model.pdb
+D:\CSADataReport\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\CSADataReport\Common\obj\Debug\CSADataReport.Common.dll
+D:\CSADataReport\Common\obj\Debug\CSADataReport.Common.pdb

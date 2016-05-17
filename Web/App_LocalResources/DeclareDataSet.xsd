@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DeclareDataSet" targetNamespace="http://tempuri.org/DeclareDataSet.xsd" xmlns:mstns="http://tempuri.org/DeclareDataSet.xsd" xmlns="http://tempuri.org/DeclareDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.;Initial Catalog=CSADataReport;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="servertemp2222.CSADataReport.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="servertemp2222.CSADataReport.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select dd.Id,dd.DeclareReportYear,dd.DeclareReportWeek,ca.CompanyName,ca.AreaName,ca.CompanyNum,sum(dd.GFOtherDeclareBallot+dd.GFOuterDeclareBallot+dd.GFSelfDeclareBallot+dd.QTOtherDeclareBallot+dd.QTOuterDeclareBallot+dd.QTSelfDeclareBallot) as TotalBallot,SUM(GFOtherDeclareContainer+GFOuterDeclareContainer+GFSelfDeclareContainer+QTOtherDeclareContainer+QTOuterDeclareContainer+QTSelfDeclareContainer) as TotalContainer,SUM(GFOtherDeclareIncome+GFOuterDeclareIncome+GFSelfDeclareIncome+QTOtherDeclareIncome+QTOuterDeclareIncome+QTSelfDeclareIncome) as TotalIncome from dbo.T_DeclareDatas as dd join (select a.Id,a.CompanyName,a.CompanyCode,a.CompanyNum,b.AreaName from dbo.T_Companies as a join dbo.T_Areas as b on a.AreaId=b.Id) as ca on dd.CompanyId=ca.Id GROUP BY dd.Id,dd.DeclareReportYear,dd.DeclareReportWeek,ca.CompanyName,ca.AreaName,ca.CompanyNum</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="DeclareReportYear" DataSetColumn="DeclareReportYear" />
+              <Mapping SourceColumn="DeclareReportWeek" DataSetColumn="DeclareReportWeek" />
+              <Mapping SourceColumn="CompanyName" DataSetColumn="CompanyName" />
+              <Mapping SourceColumn="AreaName" DataSetColumn="AreaName" />
+              <Mapping SourceColumn="CompanyNum" DataSetColumn="CompanyNum" />
+              <Mapping SourceColumn="TotalBallot" DataSetColumn="TotalBallot" />
+              <Mapping SourceColumn="TotalContainer" DataSetColumn="TotalContainer" />
+              <Mapping SourceColumn="TotalIncome" DataSetColumn="TotalIncome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DeclareDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DeclareDataSet" msprop:Generator_UserDSName="DeclareDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="DeclareReportYear" msprop:Generator_ColumnVarNameInTable="columnDeclareReportYear" msprop:Generator_ColumnPropNameInRow="DeclareReportYear" msprop:Generator_ColumnPropNameInTable="DeclareReportYearColumn" msprop:Generator_UserColumnName="DeclareReportYear" type="xs:int" />
+              <xs:element name="DeclareReportWeek" msprop:Generator_ColumnVarNameInTable="columnDeclareReportWeek" msprop:Generator_ColumnPropNameInRow="DeclareReportWeek" msprop:Generator_ColumnPropNameInTable="DeclareReportWeekColumn" msprop:Generator_UserColumnName="DeclareReportWeek" type="xs:int" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AreaName" msprop:Generator_ColumnVarNameInTable="columnAreaName" msprop:Generator_ColumnPropNameInRow="AreaName" msprop:Generator_ColumnPropNameInTable="AreaNameColumn" msprop:Generator_UserColumnName="AreaName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyNum" msprop:Generator_ColumnVarNameInTable="columnCompanyNum" msprop:Generator_ColumnPropNameInRow="CompanyNum" msprop:Generator_ColumnPropNameInTable="CompanyNumColumn" msprop:Generator_UserColumnName="CompanyNum">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalBallot" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalBallot" msprop:Generator_ColumnPropNameInRow="TotalBallot" msprop:Generator_ColumnPropNameInTable="TotalBallotColumn" msprop:Generator_UserColumnName="TotalBallot" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalContainer" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalContainer" msprop:Generator_ColumnPropNameInRow="TotalContainer" msprop:Generator_ColumnPropNameInTable="TotalContainerColumn" msprop:Generator_UserColumnName="TotalContainer" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalIncome" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalIncome" msprop:Generator_ColumnPropNameInRow="TotalIncome" msprop:Generator_ColumnPropNameInTable="TotalIncomeColumn" msprop:Generator_UserColumnName="TotalIncome" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

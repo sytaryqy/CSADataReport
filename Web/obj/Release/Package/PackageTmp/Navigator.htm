@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Css/index.css" rel="stylesheet" type="text/css" />
+    <script src="Scripte/jquery-1.4.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function DoReDirect(str) {
+//            document.frames("InsertFrame").location = "/DeclareReport.aspx";
+            //            document.frames("ListFrame").location = "/DeclareReportedList.aspx";
+            window.parent.mainFrame.location = str;
+
+        }
+    </script>
+</head>
+<body>
+    <img src="Images/CSALog.png" />
+<div id="tabsI" style="width: 800px; height: 30px">
+<ul>
+                 <!-- CSS Tabs -->
+<li><b onclick='DoReDirect("/Main.aspx");' ><span>首页</span></b></li>
+<li><b onclick='DoReDirect("/DeclareReport.htm");'><span>报关数据填报</span></b></li>
+<li><b onclick='DoReDirect("/RouteDatasReport.htm");'><span>航线数据填报</span></b></li>
+<li><b onclick='DoReDirect("/LinerReport.htm");' ><span>班轮货量填报</span></b></li>
+<li><b onclick='DoReDirect("/LinerIncomeReport.htm");'><span>班轮收入填报</span></b></li>
+<li><b onclick='DoReDirect("/IncomeDatasReport.htm");'><span>收入数据填报</span></b></li>
+<li><b onclick='DoReDirect("/DatasReporting.aspx");'><span>报表中心</span></b></li>
+</ul>
+  </div>
+</body>
+</html>

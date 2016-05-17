@@ -1,0 +1,4 @@
+D:\CSADataReport\Model\bin\Debug\CSADataReport.Model.dll
+D:\CSADataReport\Model\bin\Debug\CSADataReport.Model.pdb
+D:\CSADataReport\Model\obj\Debug\CSADataReport.Model.dll
+D:\CSADataReport\Model\obj\Debug\CSADataReport.Model.pdb

@@ -1,0 +1,6 @@
+2015-06-29 10:31:16,593 [71] ERROR CSADataReport.Web.LinerReport - 查询条件：LinerCompanyId=2且ReportWeek=25的数据失败错误信息：关键字 'where' 附近有语法错误。
+2015-06-29 10:31:22,611 [85] ERROR CSADataReport.Web.LinerReport - 查询条件：LinerCompanyId=2且ReportWeek=25的数据失败错误信息：关键字 'where' 附近有语法错误。
+2015-06-29 10:53:48,706 [4] ERROR CSADataReport.Web.LinerReport - 查询条件：LinerCompanyId=2且ReportWeek=24的数据失败错误信息：关键字 'where' 附近有语法错误。
+2015-06-29 11:04:08,166 [18] ERROR CSADataReport.Web.LinerReport - 查询条件：LinerCompanyId=2且ReportWeek=24的数据失败错误信息：关键字 'where' 附近有语法错误。
+2015-07-21 08:49:33,438 [9] ERROR CSADataReport.Web.RouteDatasReport - 口岸:的欧线 其它的数据添加失败错误信息：INSERT 语句与 FOREIGN KEY 约束"FK_T_RouteDatas_T_Companies"冲突。该冲突发生于数据库"CSADataReport"，表"dbo.T_Companies", column 'Id'。
+语句已终止。

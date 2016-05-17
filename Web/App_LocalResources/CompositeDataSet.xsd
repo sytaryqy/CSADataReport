@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CompositeDataSet" targetNamespace="http://tempuri.org/CompositeDataSet.xsd" xmlns:mstns="http://tempuri.org/CompositeDataSet.xsd" xmlns="http://tempuri.org/CompositeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.;Initial Catalog=CSADataReport;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="servertemp2222.CSADataReport.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CompositeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CompositeDataSet" msprop:Generator_UserDSName="CompositeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DeclareReportYear" msprop:Generator_ColumnVarNameInTable="columnDeclareReportYear" msprop:Generator_ColumnPropNameInRow="DeclareReportYear" msprop:Generator_ColumnPropNameInTable="DeclareReportYearColumn" msprop:Generator_UserColumnName="DeclareReportYear" type="xs:string" minOccurs="0" />
+              <xs:element name="ContainerIncome" msprop:Generator_ColumnVarNameInTable="columnContainerIncome" msprop:Generator_ColumnPropNameInRow="ContainerIncome" msprop:Generator_ColumnPropNameInTable="ContainerIncomeColumn" msprop:Generator_UserColumnName="ContainerIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="DeclareIncome" msprop:Generator_ColumnVarNameInTable="columnDeclareIncome" msprop:Generator_ColumnPropNameInRow="DeclareIncome" msprop:Generator_ColumnPropNameInTable="DeclareIncomeColumn" msprop:Generator_UserColumnName="DeclareIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="LinerIncom" msprop:Generator_ColumnVarNameInTable="columnLinerIncom" msprop:Generator_ColumnPropNameInRow="LinerIncom" msprop:Generator_ColumnPropNameInTable="LinerIncomColumn" msprop:Generator_UserColumnName="LinerIncom" type="xs:string" minOccurs="0" />
+              <xs:element name="MonthTotalIncome" msprop:Generator_ColumnVarNameInTable="columnMonthTotalIncome" msprop:Generator_ColumnPropNameInRow="MonthTotalIncome" msprop:Generator_ColumnPropNameInTable="MonthTotalIncomeColumn" msprop:Generator_UserColumnName="MonthTotalIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="LastYearSameTimeTotalIncome" msprop:Generator_ColumnVarNameInTable="columnLastYearSameTimeTotalIncome" msprop:Generator_ColumnPropNameInRow="LastYearSameTimeTotalIncome" msprop:Generator_ColumnPropNameInTable="LastYearSameTimeTotalIncomeColumn" msprop:Generator_UserColumnName="LastYearSameTimeTotalIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="PrevMonthTotalIncome" msprop:Generator_ColumnVarNameInTable="columnPrevMonthTotalIncome" msprop:Generator_ColumnPropNameInRow="PrevMonthTotalIncome" msprop:Generator_ColumnPropNameInTable="PrevMonthTotalIncomeColumn" msprop:Generator_UserColumnName="PrevMonthTotalIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="YearTotalIncome" msprop:Generator_ColumnVarNameInTable="columnYearTotalIncome" msprop:Generator_ColumnPropNameInRow="YearTotalIncome" msprop:Generator_ColumnPropNameInTable="YearTotalIncomeColumn" msprop:Generator_UserColumnName="YearTotalIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="LastYearTotalIncome" msprop:Generator_ColumnVarNameInTable="columnLastYearTotalIncome" msprop:Generator_ColumnPropNameInRow="LastYearTotalIncome" msprop:Generator_ColumnPropNameInTable="LastYearTotalIncomeColumn" msprop:Generator_UserColumnName="LastYearTotalIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="AreaName" msprop:Generator_ColumnVarNameInTable="columnAreaName" msprop:Generator_ColumnPropNameInRow="AreaName" msprop:Generator_ColumnPropNameInTable="AreaNameColumn" msprop:Generator_UserColumnName="AreaName" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

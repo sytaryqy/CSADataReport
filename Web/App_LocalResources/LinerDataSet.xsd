@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LinerDataSet" targetNamespace="http://tempuri.org/LinerDataSet.xsd" xmlns:mstns="http://tempuri.org/LinerDataSet.xsd" xmlns="http://tempuri.org/LinerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.;Initial Catalog=CSADataReport;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="servertemp2222.CSADataReport.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LinerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="LinerDataSet" msprop:Generator_UserDSName="LinerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AreaName" msprop:Generator_ColumnVarNameInTable="columnAreaName" msprop:Generator_ColumnPropNameInRow="AreaName" msprop:Generator_ColumnPropNameInTable="AreaNameColumn" msprop:Generator_UserColumnName="AreaName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReportYear" msprop:Generator_ColumnVarNameInTable="columnReportYear" msprop:Generator_ColumnPropNameInRow="ReportYear" msprop:Generator_ColumnPropNameInTable="ReportYearColumn" msprop:Generator_UserColumnName="ReportYear" type="xs:string" minOccurs="0" />
+              <xs:element name="ProxyCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnProxyCount" msprop:Generator_ColumnPropNameInRow="ProxyCount" msprop:Generator_ColumnPropNameInTable="ProxyCountColumn" msprop:Generator_UserColumnName="ProxyCount" type="xs:int" minOccurs="0" />
+              <xs:element name="LinerIncome" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLinerIncome" msprop:Generator_ColumnPropNameInRow="LinerIncome" msprop:Generator_ColumnPropNameInTable="LinerIncomeColumn" msprop:Generator_UserColumnName="LinerIncome" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastYearSameTimeProxyCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastYearSameTimeProxyCount" msprop:Generator_ColumnPropNameInRow="LastYearSameTimeProxyCount" msprop:Generator_ColumnPropNameInTable="LastYearSameTimeProxyCountColumn" msprop:Generator_UserColumnName="LastYearSameTimeProxyCount" type="xs:int" minOccurs="0" />
+              <xs:element name="LastYearSameTimeLinerIncome" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastYearSameTimeLinerIncome" msprop:Generator_ColumnPropNameInRow="LastYearSameTimeLinerIncome" msprop:Generator_ColumnPropNameInTable="LastYearSameTimeLinerIncomeColumn" msprop:Generator_UserColumnName="LastYearSameTimeLinerIncome" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PrevMonthProxyCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrevMonthProxyCount" msprop:Generator_ColumnPropNameInRow="PrevMonthProxyCount" msprop:Generator_ColumnPropNameInTable="PrevMonthProxyCountColumn" msprop:Generator_UserColumnName="PrevMonthProxyCount" type="xs:int" minOccurs="0" />
+              <xs:element name="PrevMonthLinerIncome" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrevMonthLinerIncome" msprop:Generator_ColumnPropNameInRow="PrevMonthLinerIncome" msprop:Generator_ColumnPropNameInTable="PrevMonthLinerIncomeColumn" msprop:Generator_UserColumnName="PrevMonthLinerIncome" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YearTotalProxyCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYearTotalProxyCount" msprop:Generator_ColumnPropNameInRow="YearTotalProxyCount" msprop:Generator_ColumnPropNameInTable="YearTotalProxyCountColumn" msprop:Generator_UserColumnName="YearTotalProxyCount" type="xs:int" minOccurs="0" />
+              <xs:element name="YearTotalLinerIncome" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYearTotalLinerIncome" msprop:Generator_ColumnPropNameInRow="YearTotalLinerIncome" msprop:Generator_ColumnPropNameInTable="YearTotalLinerIncomeColumn" msprop:Generator_UserColumnName="YearTotalLinerIncome" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastYearTotalProxyCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastYearTotalProxyCount" msprop:Generator_ColumnPropNameInRow="LastYearTotalProxyCount" msprop:Generator_ColumnPropNameInTable="LastYearTotalProxyCountColumn" msprop:Generator_UserColumnName="LastYearTotalProxyCount" type="xs:int" minOccurs="0" />
+              <xs:element name="LastYearTotalLinerIncome" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastYearTotalLinerIncome" msprop:Generator_ColumnPropNameInRow="LastYearTotalLinerIncome" msprop:Generator_ColumnPropNameInTable="LastYearTotalLinerIncomeColumn" msprop:Generator_UserColumnName="LastYearTotalLinerIncome" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

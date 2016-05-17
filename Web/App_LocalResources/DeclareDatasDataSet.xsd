@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DeclareDatasDataSet" targetNamespace="http://tempuri.org/DeclareDatasDataSet.xsd" xmlns:mstns="http://tempuri.org/DeclareDatasDataSet.xsd" xmlns="http://tempuri.org/DeclareDatasDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DeclareDatasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DeclareDatasDataSet" msprop:Generator_UserDSName="DeclareDatasDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReportYear" msprop:Generator_ColumnVarNameInTable="columnReportYear" msprop:Generator_ColumnPropNameInRow="ReportYear" msprop:Generator_ColumnPropNameInTable="ReportYearColumn" msprop:Generator_UserColumnName="ReportYear" type="xs:string" minOccurs="0" />
+              <xs:element name="ReportWeek" msprop:Generator_ColumnVarNameInTable="columnReportWeek" msprop:Generator_ColumnPropNameInRow="ReportWeek" msprop:Generator_ColumnPropNameInTable="ReportWeekColumn" msprop:Generator_UserColumnName="ReportWeek" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" type="xs:string" minOccurs="0" />
+              <xs:element name="AreaName" msprop:Generator_ColumnVarNameInTable="columnAreaName" msprop:Generator_ColumnPropNameInRow="AreaName" msprop:Generator_ColumnPropNameInTable="AreaNameColumn" msprop:Generator_UserColumnName="AreaName" type="xs:string" minOccurs="0" />
+              <xs:element name="DeclareBusinessType" msprop:Generator_ColumnVarNameInTable="columnDeclareBusinessType" msprop:Generator_ColumnPropNameInRow="DeclareBusinessType" msprop:Generator_ColumnPropNameInTable="DeclareBusinessTypeColumn" msprop:Generator_UserColumnName="DeclareBusinessType" type="xs:string" minOccurs="0" />
+              <xs:element name="DeclareType" msprop:Generator_ColumnVarNameInTable="columnDeclareType" msprop:Generator_ColumnPropNameInRow="DeclareType" msprop:Generator_ColumnPropNameInTable="DeclareTypeColumn" msprop:Generator_UserColumnName="DeclareType" type="xs:string" minOccurs="0" />
+              <xs:element name="DeclareBallot" msprop:Generator_ColumnVarNameInTable="columnDeclareBallot" msprop:Generator_ColumnPropNameInRow="DeclareBallot" msprop:Generator_ColumnPropNameInTable="DeclareBallotColumn" msprop:Generator_UserColumnName="DeclareBallot" type="xs:string" minOccurs="0" />
+              <xs:element name="DeclareContainer" msprop:Generator_ColumnVarNameInTable="columnDeclareContainer" msprop:Generator_ColumnPropNameInRow="DeclareContainer" msprop:Generator_ColumnPropNameInTable="DeclareContainerColumn" msprop:Generator_UserColumnName="DeclareContainer" type="xs:string" minOccurs="0" />
+              <xs:element name="DeclareIncome" msprop:Generator_ColumnVarNameInTable="columnDeclareIncome" msprop:Generator_ColumnPropNameInRow="DeclareIncome" msprop:Generator_ColumnPropNameInTable="DeclareIncomeColumn" msprop:Generator_UserColumnName="DeclareIncome" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

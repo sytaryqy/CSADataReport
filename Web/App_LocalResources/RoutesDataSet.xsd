@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RoutesDataSet" targetNamespace="http://tempuri.org/RoutesDataSet.xsd" xmlns:mstns="http://tempuri.org/RoutesDataSet.xsd" xmlns="http://tempuri.org/RoutesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.;Initial Catalog=CSADataReport;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="servertemp2222.CSADataReport.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="servertemp2222.CSADataReport.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select dd.Id,dd.ReportYear,dd.ReportWeek,bb.Name as RouteName,cc.Name as LineName, ca.CompanyName,ca.AreaName,ca.CompanyNum,sum(GP20) as TotalGp20,SUM(GP40) as TotalGp40,SUM(HQ40) as TotalHq40,SUM(HQ45) as TotalOther20,SUM(Others) as TotalOther40,SUM( TEU) as TotalTeu from dbo.T_RouteDatas as dd join dbo.T_Routes as bb on dd.RouteId=bb.Id join dbo.T_Lines as cc on dd.LineId=cc.Id join (select a.Id,a.CompanyName,a.CompanyCode,a.CompanyNum,b.AreaName from dbo.T_Companies as a join dbo.T_Areas as b on a.AreaId=b.Id) as ca on dd.CompanyId=ca.Id where ReportYear=2015 and ReportWeek between 28 and 29 and IsReported='true' GROUP BY dd.Id,dd.ReportYear,dd.ReportWeek,ca.CompanyName,ca.AreaName,ca.CompanyNum ,bb.Name,cc.Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="ReportYear" DataSetColumn="ReportYear" />
+              <Mapping SourceColumn="ReportWeek" DataSetColumn="ReportWeek" />
+              <Mapping SourceColumn="CompanyName" DataSetColumn="CompanyName" />
+              <Mapping SourceColumn="AreaName" DataSetColumn="AreaName" />
+              <Mapping SourceColumn="CompanyNum" DataSetColumn="CompanyNum" />
+              <Mapping SourceColumn="TotalGp20" DataSetColumn="TotalGp20" />
+              <Mapping SourceColumn="TotalGp40" DataSetColumn="TotalGp40" />
+              <Mapping SourceColumn="TotalHq40" DataSetColumn="TotalHq40" />
+              <Mapping SourceColumn="TotalOther20" DataSetColumn="TotalOther20" />
+              <Mapping SourceColumn="TotalOther40" DataSetColumn="TotalOther40" />
+              <Mapping SourceColumn="TotalTeu" DataSetColumn="TotalTeu" />
+              <Mapping SourceColumn="RouteName" DataSetColumn="RouteName" />
+              <Mapping SourceColumn="LineName" DataSetColumn="LineName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RoutesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RoutesDataSet" msprop:Generator_UserDSName="RoutesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="ReportYear" msprop:Generator_ColumnVarNameInTable="columnReportYear" msprop:Generator_ColumnPropNameInRow="ReportYear" msprop:Generator_ColumnPropNameInTable="ReportYearColumn" msprop:Generator_UserColumnName="ReportYear" type="xs:int" />
+              <xs:element name="ReportWeek" msprop:Generator_ColumnVarNameInTable="columnReportWeek" msprop:Generator_ColumnPropNameInRow="ReportWeek" msprop:Generator_ColumnPropNameInTable="ReportWeekColumn" msprop:Generator_UserColumnName="ReportWeek" type="xs:int" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AreaName" msprop:Generator_ColumnVarNameInTable="columnAreaName" msprop:Generator_ColumnPropNameInRow="AreaName" msprop:Generator_ColumnPropNameInTable="AreaNameColumn" msprop:Generator_UserColumnName="AreaName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyNum" msprop:Generator_ColumnVarNameInTable="columnCompanyNum" msprop:Generator_ColumnPropNameInRow="CompanyNum" msprop:Generator_ColumnPropNameInTable="CompanyNumColumn" msprop:Generator_UserColumnName="CompanyNum">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalGp20" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalGp20" msprop:Generator_ColumnPropNameInRow="TotalGp20" msprop:Generator_ColumnPropNameInTable="TotalGp20Column" msprop:Generator_UserColumnName="TotalGp20" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalGp40" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalGp40" msprop:Generator_ColumnPropNameInRow="TotalGp40" msprop:Generator_ColumnPropNameInTable="TotalGp40Column" msprop:Generator_UserColumnName="TotalGp40" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalHq40" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalHq40" msprop:Generator_ColumnPropNameInRow="TotalHq40" msprop:Generator_ColumnPropNameInTable="TotalHq40Column" msprop:Generator_UserColumnName="TotalHq40" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalOther20" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalOther20" msprop:Generator_ColumnPropNameInRow="TotalOther20" msprop:Generator_ColumnPropNameInTable="TotalOther20Column" msprop:Generator_UserColumnName="TotalOther20" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalOther40" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalOther40" msprop:Generator_ColumnPropNameInRow="TotalOther40" msprop:Generator_ColumnPropNameInTable="TotalOther40Column" msprop:Generator_UserColumnName="TotalOther40" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalTeu" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalTeu" msprop:Generator_ColumnPropNameInRow="TotalTeu" msprop:Generator_ColumnPropNameInTable="TotalTeuColumn" msprop:Generator_UserColumnName="TotalTeu" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RouteName" msprop:Generator_ColumnVarNameInTable="columnRouteName" msprop:Generator_ColumnPropNameInRow="RouteName" msprop:Generator_ColumnPropNameInTable="RouteNameColumn" msprop:Generator_UserColumnName="RouteName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LineName" msprop:Generator_ColumnVarNameInTable="columnLineName" msprop:Generator_ColumnPropNameInRow="LineName" msprop:Generator_ColumnPropNameInTable="LineNameColumn" msprop:Generator_UserColumnName="LineName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

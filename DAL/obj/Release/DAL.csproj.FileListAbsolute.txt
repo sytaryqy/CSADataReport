@@ -1,0 +1,13 @@
+D:\CSADataReport\DAL\bin\Release\CSADataReport.DAL.dll
+D:\CSADataReport\DAL\bin\Release\CSADataReport.Common.dll
+D:\CSADataReport\DAL\bin\Release\CSADataReport.DBUtility.dll
+D:\CSADataReport\DAL\bin\Release\CSADataReport.Model.dll
+D:\CSADataReport\DAL\bin\Release\MySql.Data.dll
+D:\CSADataReport\DAL\bin\Release\OpenSmtp.dll
+D:\CSADataReport\DAL\bin\Release\Excel.dll
+D:\CSADataReport\DAL\bin\Release\COM.Excel.dll
+D:\CSADataReport\DAL\bin\Release\System.Data.SQLite.dll
+D:\CSADataReport\DAL\bin\Release\IBatisNet.DataMapper.dll
+D:\CSADataReport\DAL\bin\Release\IBatisNet.Common.dll
+D:\CSADataReport\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\CSADataReport\DAL\obj\Release\CSADataReport.DAL.dll

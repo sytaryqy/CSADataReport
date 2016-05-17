@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B535162-10C2-4238-BC56-193B968E1834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSADataReport.Web</RootNamespace>
+    <AssemblyName>CSADataReport.Web</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="LTP.Accounts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LtpPageControl, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\LtpPageControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls, Version=1.0.2.226, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\DatasManageMain.aspx" />
+    <Content Include="Admin\DeclareDatasManage.aspx" />
+    <Content Include="Admin\IncomeDatasManage.aspx" />
+    <Content Include="Admin\LinerDatasManage.aspx" />
+    <Content Include="Admin\LinerIncomeManage.aspx" />
+    <Content Include="Admin\RouteDatasManage.aspx" />
+    <Content Include="Admin\UserManager.aspx" />
+    <Content Include="Controls\checkright.ascx" />
+    <Content Include="Controls\copyright.ascx" />
+    <Content Include="Css\btnclass.css" />
+    <Content Include="Css\css.css" />
+    <Content Include="Css\Default.css" />
+    <Content Include="Css\index.css" />
+    <Content Include="Css\login.css" />
+    <Content Include="Css\style.css" />
+    <Content Include="DatasReporting.aspx" />
+    <Content Include="DeclareReport.aspx" />
+    <Content Include="DeclareReport.htm" />
+    <Content Include="DeclareReportedList.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\a_te01.gif" />
+    <Content Include="Images\a_te02.gif" />
+    <Content Include="Images\a_te03.GIF" />
+    <Content Include="Images\btnBlue.JPG" />
+    <Content Include="Images\button.gif" />
+    <Content Include="Images\CSALog.png" />
+    <Content Include="Images\desktop_01.gif" />
+    <Content Include="Images\login_p_img02.gif" />
+    <Content Include="Images\login_p_img03.gif" />
+    <Content Include="Images\login_p_img04.gif" />
+    <Content Include="Images\login_p_img05.gif" />
+    <Content Include="Images\login_p_img11.gif" />
+    <Content Include="Images\point07.gif" />
+    <Content Include="Images\tableftI.gif" />
+    <Content Include="Images\tabrightI.gif" />
+    <Content Include="IncomeDatasReport.aspx" />
+    <Content Include="IncomeDatasReport.htm" />
+    <Content Include="IncomeDatasReportedList.aspx" />
+    <Content Include="js\calendar1.js" />
+    <Content Include="js\CheckBox.js" />
+    <Content Include="lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="lib\log4net\log4net.dll" />
+    <Content Include="lib\log4net\log4net.xml" />
+    <Content Include="lib\My97DatePicker\calendar.js" />
+    <Content Include="lib\My97DatePicker\lang\en.js" />
+    <Content Include="lib\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="lib\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="lib\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="lib\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="lib\My97DatePicker\skin\default\img.gif" />
+    <Content Include="lib\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="lib\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="lib\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="lib\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="lib\My97DatePicker\WdatePicker.js" />
+    <Content Include="lib\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="lib\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="lib\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="lib\My97DatePicker\开发包\readme.txt" />
+    <Content Include="lib\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="lib\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="lib\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="lib\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="lib\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="lib\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="lib\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="lib\NPOI.DDF.dll" />
+    <Content Include="lib\NPOI.DDF.xml" />
+    <Content Include="lib\NPOI.dll" />
+    <Content Include="lib\NPOI.HPSF.dll" />
+    <Content Include="lib\NPOI.HPSF.xml" />
+    <Content Include="lib\NPOI.HSSF.dll" />
+    <Content Include="lib\NPOI.HSSF.XML" />
+    <Content Include="lib\NPOI.POIFS.dll" />
+    <Content Include="lib\NPOI.POIFS.xml" />
+    <Content Include="lib\NPOI.Util.dll" />
+    <Content Include="lib\NPOI.Util.xml" />
+    <Content Include="lib\NPOI.xml" />
+    <Content Include="LinerIncomeDatas.aspx" />
+    <Content Include="LinerIncomeDatasList.aspx" />
+    <Content Include="LinerReport.aspx" />
+    <Content Include="LinerReportedList.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="Main.htm" />
+    <Content Include="Navigator.htm" />
+    <Content Include="RouteDatasReport.aspx" />
+    <Content Include="RouteDatasReport.htm" />
+    <Content Include="RouteDatasReportList.aspx" />
+    <Content Include="Scripte\common.js" />
+    <Content Include="Scripte\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripte\jquery-1.4.1.js" />
+    <Content Include="Scripte\jquery-1.4.1.min.js" />
+    <Content Include="UserLogin.aspx" />
+    <Content Include="UserPwdEdit.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="LinerReport.htm" />
+    <Content Include="LinerIncomeReport.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\DatasManageMain.aspx.cs">
+      <DependentUpon>DatasManageMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DatasManageMain.aspx.designer.cs">
+      <DependentUpon>DatasManageMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DeclareDatasManage.aspx.cs">
+      <DependentUpon>DeclareDatasManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DeclareDatasManage.aspx.designer.cs">
+      <DependentUpon>DeclareDatasManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IncomeDatasManage.aspx.cs">
+      <DependentUpon>IncomeDatasManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IncomeDatasManage.aspx.designer.cs">
+      <DependentUpon>IncomeDatasManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LinerDatasManage.aspx.cs">
+      <DependentUpon>LinerDatasManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LinerDatasManage.aspx.designer.cs">
+      <DependentUpon>LinerDatasManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LinerIncomeManage.aspx.cs">
+      <DependentUpon>LinerIncomeManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LinerIncomeManage.aspx.designer.cs">
+      <DependentUpon>LinerIncomeManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RouteDatasManage.aspx.cs">
+      <DependentUpon>RouteDatasManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RouteDatasManage.aspx.designer.cs">
+      <DependentUpon>RouteDatasManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserManager.aspx.cs">
+      <DependentUpon>UserManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserManager.aspx.designer.cs">
+      <DependentUpon>UserManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\GetLastMonthDatas.ashx.cs">
+      <DependentUpon>GetLastMonthDatas.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\CompositeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompositeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CheckRight.ascx.cs">
+      <DependentUpon>checkright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckRight.ascx.designer.cs">
+      <DependentUpon>checkright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CopyRight.ascx.cs">
+      <DependentUpon>copyright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CopyRight.ascx.designer.cs">
+      <DependentUpon>copyright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DatasReporting.aspx.cs">
+      <DependentUpon>DatasReporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatasReporting.aspx.designer.cs">
+      <DependentUpon>DatasReporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\DeclareDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeclareDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\DeclareDatasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeclareDatasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeclareReport.aspx.cs">
+      <DependentUpon>DeclareReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeclareReport.aspx.designer.cs">
+      <DependentUpon>DeclareReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeclareReportedList.aspx.cs">
+      <DependentUpon>DeclareReportedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeclareReportedList.aspx.designer.cs">
+      <DependentUpon>DeclareReportedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\IncomeDatasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeDatasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeDatasReport.aspx.cs">
+      <DependentUpon>IncomeDatasReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncomeDatasReport.aspx.designer.cs">
+      <DependentUpon>IncomeDatasReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeDatasReportedList.aspx.cs">
+      <DependentUpon>IncomeDatasReportedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncomeDatasReportedList.aspx.designer.cs">
+      <DependentUpon>IncomeDatasReportedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\LinerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LinerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\LinerDatasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LinerDatasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LinerIncomeDatas.aspx.cs">
+      <DependentUpon>LinerIncomeDatas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinerIncomeDatas.aspx.designer.cs">
+      <DependentUpon>LinerIncomeDatas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\LinerIncomeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LinerIncomeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LinerIncomeDatasList.aspx.cs">
+      <DependentUpon>LinerIncomeDatasList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinerIncomeDatasList.aspx.designer.cs">
+      <DependentUpon>LinerIncomeDatasList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinerReport.aspx.cs">
+      <DependentUpon>LinerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinerReport.aspx.designer.cs">
+      <DependentUpon>LinerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinerReportedList.aspx.cs">
+      <DependentUpon>LinerReportedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinerReportedList.aspx.designer.cs">
+      <DependentUpon>LinerReportedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouteDatasReport.aspx.cs">
+      <DependentUpon>RouteDatasReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RouteDatasReport.aspx.designer.cs">
+      <DependentUpon>RouteDatasReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RouteDatasReportList.aspx.cs">
+      <DependentUpon>RouteDatasReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RouteDatasReportList.aspx.designer.cs">
+      <DependentUpon>RouteDatasReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\RoutesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RoutesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMasterPage.Master.cs">
+      <DependentUpon>UserMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMasterPage.Master.designer.cs">
+      <DependentUpon>UserMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserPwdEdit.aspx.cs">
+      <DependentUpon>UserPwdEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPwdEdit.aspx.designer.cs">
+      <DependentUpon>UserPwdEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.designer.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.aspx.resx">
+      <DependentUpon>Main.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_LocalResources\ReportComposite.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportDeclareStyle1.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportDeclareStyle2.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportLiner.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportRoutes.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportRoutesStyle2.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportLinerDatas.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportLinerIncome.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportIncomeDatas.rdlc" />
+    <EmbeddedResource Include="App_LocalResources\ReportDeclareDatas.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ValidateCode.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UserMasterPage.Master" />
+    <Content Include="Ashx\Logout.ashx" />
+    <Content Include="Ashx\GetLastMonthDatas.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_LocalResources\CompositeDataSet.xsc">
+      <DependentUpon>CompositeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\CompositeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompositeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_LocalResources\CompositeDataSet.xss">
+      <DependentUpon>CompositeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\DeclareDataSet.xsc">
+      <DependentUpon>DeclareDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\DeclareDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DeclareDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_LocalResources\DeclareDataSet.xss">
+      <DependentUpon>DeclareDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\LinerDataSet.xsc">
+      <DependentUpon>LinerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\LinerDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LinerDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_LocalResources\LinerDataSet.xss">
+      <DependentUpon>LinerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\RoutesDataSet.xsc">
+      <DependentUpon>RoutesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\RoutesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RoutesDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_LocalResources\RoutesDataSet.xss">
+      <DependentUpon>RoutesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\LinerDatasDataSet.xsc">
+      <DependentUpon>LinerDatasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\LinerDatasDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LinerDatasDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_LocalResources\LinerDatasDataSet.xss">
+      <DependentUpon>LinerDatasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\LinerIncomeDataSet.xsc">
+      <DependentUpon>LinerIncomeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\LinerIncomeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LinerIncomeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_LocalResources\LinerIncomeDataSet.xss">
+      <DependentUpon>LinerIncomeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\IncomeDatasDataSet.xsc">
+      <DependentUpon>IncomeDatasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\IncomeDatasDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeDatasDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_LocalResources\IncomeDatasDataSet.xss">
+      <DependentUpon>IncomeDatasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\DeclareDatasDataSet.xsc">
+      <DependentUpon>DeclareDatasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_LocalResources\DeclareDatasDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DeclareDatasDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_LocalResources\DeclareDatasDataSet.xss">
+      <DependentUpon>DeclareDatasDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3448</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
