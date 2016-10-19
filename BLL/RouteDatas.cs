@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
-using Maticsoft.Common;
 using CSADataReport.Model;
 namespace CSADataReport.BLL
 {
@@ -60,7 +59,7 @@ namespace CSADataReport.BLL
 		/// </summary>
 		public bool DeleteList(string Idlist )
 		{
-			return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(Idlist,0) );
+			return dal.DeleteList(CSADataReport.Common.PageValidate.SafeLongFilter(Idlist,0) );
 		}
 
 		/// <summary>
@@ -79,7 +78,7 @@ namespace CSADataReport.BLL
 		{
 			
 			string CacheKey = "RouteDatasModel-" + Id;
-			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
+			object objModel = CSADataReport.Common.DataCache.GetCache(CacheKey);
 			if (objModel == null)
 			{
 				try
@@ -87,8 +86,8 @@ namespace CSADataReport.BLL
 					objModel = dal.GetModel(Id);
 					if (objModel != null)
 					{
-						int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
+						int ModelCache = CSADataReport.Common.ConfigHelper.GetConfigInt("ModelCache");
+						CSADataReport.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
 					}
 				}
 				catch{}

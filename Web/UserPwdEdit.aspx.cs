@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing;
 using System.Data;
-using Maticsoft.Common;
+using CSADataReport.Common;
 
 namespace CSADataReport.Web
 {
@@ -22,19 +22,9 @@ namespace CSADataReport.Web
                     txtUname.Text = currentUser.LoginName;
                     txtUname.ReadOnly = true;
                     txtUname.BackColor = Color.FromArgb(155, 187, 88);
-                    //txtUname.BorderColor = Color.FromArgb(155, 187, 88);
                     txtUname.BorderWidth = 0;
                 }
             }
-            //else
-            //{
-            //    if (Session["UserInfo"] != null)
-            //    {
-            //        Model.Users currentUser = (Model.Users)Session["UserInfo"];
-            //        txtUname.Text = currentUser.LoginName;
-            //        txtUname.ReadOnly = true;
-            //    }
-            //}
 
         }
 

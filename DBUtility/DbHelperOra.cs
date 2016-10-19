@@ -5,7 +5,7 @@ using System.Data;
 using System.Data.OracleClient;
 using System.Configuration;
 
-namespace Maticsoft.DBUtility
+namespace CSADataReport.DBUtility
 {
 	/// <summary>
     /// Copyright (C) Maticsoft

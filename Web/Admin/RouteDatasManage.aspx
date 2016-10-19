@@ -50,7 +50,7 @@
             DataObjectTypeName="CSADataReport.Model.RouteDatas" InsertMethod="Add" 
             UpdateMethod="Update">
             <SelectParameters>
-                <asp:Parameter Name="strWhere" Type="String" DefaultValue=" " />
+                <asp:Parameter Name="strWhere" Type="String" DefaultValue="ReportYear = 0 " />
             </SelectParameters>
         
         </asp:ObjectDataSource>

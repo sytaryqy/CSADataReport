@@ -5,7 +5,7 @@ using System.Data.OracleClient;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Maticsoft.DBUtility
+namespace CSADataReport.DBUtility
 {
 
     /// <summary>

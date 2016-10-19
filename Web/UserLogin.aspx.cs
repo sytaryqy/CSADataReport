@@ -56,13 +56,13 @@ namespace CSADataReport.Web
             }
             #endregion
 
-            string userName = Maticsoft.Common.PageValidate.InputText(txtUsername.Value.Trim(), 30);
-            string Password = Maticsoft.Common.PageValidate.InputText(txtPass.Value.Trim(), 30);
+            string userName = CSADataReport.Common.PageValidate.InputText(txtUsername.Value.Trim(), 30);
+            string Password = CSADataReport.Common.PageValidate.InputText(txtPass.Value.Trim(), 30);
 
             //验证登录信息，如果验证通过则返回当前用户对象的安全上下文信息
             //AccountsPrincipal newUser = AccountsPrincipal.ValidateLogin(userName, Password);
             
-            Model.Users newUser =Maticsoft.Common.ValidateInformation.ValidateLoginUser(userName, Password);
+            Model.Users newUser =CSADataReport.Common.ValidateInformation.ValidateLoginUser(userName, Password);
             if (newUser == null)//登录信息不对
             {
                 this.lblMsg.Text = "登陆失败： " + userName;
@@ -79,34 +79,9 @@ namespace CSADataReport.Web
             else
             {
                 Model.Users currentUser = newUser;
-                //根据用户对象的上下文得到用户对象信息，用于得到其他信息
-                //User currentUser = new LTP.Accounts.Bus.User(newUser);
-                //if (currentUser.UserRoleId != 3)
-                //{
-                //    this.lblMsg.Text = "你非管理员用户，你没有权限登录后台系统！";
-                //    return;
-                //}
-
-                //把当前用户对象实例赋给Context.User，这样做将会把完整的用户信息加载到ASP.NET提供的验证体系中
-                //Context.User = newUser;
-                //验证当前用户密码
-                //if (((SiteIdentity)User.Identity).TestPassword(Password) == 0)
-                //{
-                //    this.lblMsg.Text = "你的密码无效！";
-                //    if ((Session["PassErrorCountAdmin"] != null) && (Session["PassErrorCountAdmin"].ToString() != ""))
-                //    {
-                //        int PassErroeCount = Convert.ToInt32(Session["PassErrorCountAdmin"]);
-                //        Session["PassErrorCountAdmin"] = PassErroeCount + 1;
-                //    }
-                //    else
-                //    {
-                //        Session["PassErrorCountAdmin"] = 1;
-                //    }
-                //}
-                //else
-                //{
+                
                     //保存当前用户对象信息
-                    FormsAuthentication.SetAuthCookie(userName, false);
+                    //FormsAuthentication.SetAuthCookie(userName, false);
                     Session["UserInfo"] = currentUser;
                     Session["MyCompany"] = currentUser.CompanyId.ToString();
                     //HttpCookie cookie = new HttpCookie("MyCompany", currentUser.CompanyId.ToString());

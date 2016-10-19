@@ -4,27 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Maticsoft.Common;
 
 namespace CSADataReport.Web
 {
     public partial class DeclareReport : System.Web.UI.Page
     {
-        protected Model.Users currentUser;
+        //protected Model.Users currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
                 if (Session["UserInfo"] == null)
                 {
-                    Session["returnPage"] = this.Request.Url.PathAndQuery;
-                    Response.Clear();
-                    Response.Write("<script language=javascript>window.alert('您没有权限进入本页！\\n请登录或与管理员联系！');window.location='/UserLogin.aspx';</script>");
-                    Response.End();
+                    //Session["returnPage"] = this.Request.Url.PathAndQuery;
+                    //Response.Clear();
+                    //Response.Write("<script language=javascript>window.alert('您没有权限进入本页！\\n请登录或与管理员联系！');window.location='/UserLogin.aspx';</script>");
+                    //Response.End();
+
+                    Common.CheckLogin.ShowLoginPageAndReturn();
+                    
                 }
                 else
                 {
-                    currentUser = (Model.Users)Session["UserInfo"];
+                    Model.Users currentUser = (Model.Users)Session["UserInfo"];
                     lblMsg.Text = "";
                     if (Request.Cookies["LastSavedDeclareReport" + currentUser.CompanyId] != null)
                     {
@@ -94,7 +96,7 @@ namespace CSADataReport.Web
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            currentUser = (Model.Users)Session["UserInfo"];
+            Model.Users currentUser = (Model.Users)Session["UserInfo"];
             int intAddedRecordNum = 0;
             int intBallotTotal = 0;
             int intContainerTotal = 0;
@@ -145,19 +147,7 @@ namespace CSADataReport.Web
             {
                 model.GFOuterDeclareIncome = 0;
             }
-            //model.DeclareOperationTypeId = 1;
- 
-            //model.DeclareTypeId = 1;
-            //添加报关数据记录，如果返回记录ID〉0，则表示添加成功
-            //if (declareDateBll.Add(model) > 0)
-            //{
-            //    //如果添加成功，intAddedRecord则增加1
-            //    intAddedRecord += 1;
-            //}
-            //else
-            //{
-            //    strMsg += " 外包关封数据保存失败";
-            //}
+
 
             //添加自报关封报关数据
             if (!string.IsNullOrEmpty(txbZibaoGuanfengNum.Text))
@@ -187,17 +177,7 @@ namespace CSADataReport.Web
             {
                 model.GFSelfDeclareIncome = 0;
             }
-            //model.DeclareOperationTypeId = 2;
-            //float fday= (float)dtReporte.DayOfYear;
-            //model.DeclareTypeId = 1;
-            //if (declareDateBll.Add(model) > 0)
-            //{
-            //    intAddedRecord += 1;
-            //}
-            //else
-            //{
-            //    strMsg += " 自报关封数据保存失败";
-            //}
+
 
             //添加其他关封报关数据
             if (!string.IsNullOrEmpty(txbQitaGuanfengNum.Text))
@@ -227,17 +207,7 @@ namespace CSADataReport.Web
             {
                 model.GFOtherDeclareIncome = 0;
             }
-            //model.DeclareOperationTypeId = 3;
-            ////float fday= (float)dtReporte.DayOfYear;
-            //model.DeclareTypeId = 1;
-            //if (declareDateBll.Add(model) > 0)
-            //{
-            //    intAddedRecord += 1;
-            //}
-            //else
-            //{
-            //    strMsg += " 其他关封数据保存失败";
-            //}
+
 
             //添加外包其他报关数据
             if (!string.IsNullOrEmpty(txbWaibaoQitaNum.Text))
@@ -267,17 +237,6 @@ namespace CSADataReport.Web
             {
                 model.QTOuterDeclareIncome = 0;
             }
-            //model.DeclareOperationTypeId = 1;
-            ////float fday= (float)dtReporte.DayOfYear;
-            //model.DeclareTypeId = 2;
-            //if (declareDateBll.Add(model) > 0)
-            //{
-            //    intAddedRecord += 1;
-            //}
-            //else
-            //{
-            //    strMsg += " 外包其他数据保存失败";
-            //}
 
             //添加自报其他报关数据
             if (!string.IsNullOrEmpty(txbZibaoQitaNum.Text))
@@ -307,17 +266,6 @@ namespace CSADataReport.Web
             {
                 model.QTSelfDeclareIncome = 0;
             }
-            //model.DeclareOperationTypeId = 2;
-            ////float fday= (float)dtReporte.DayOfYear;
-            //model.DeclareTypeId = 2;
-            //if (declareDateBll.Add(model) > 0)
-            //{
-            //    intAddedRecord += 1;
-            //}
-            //else
-            //{
-            //    strMsg += " 自报其他数据保存失败";
-            //}
 
             //添加其他报关数据
             if (!string.IsNullOrEmpty(txbQitaNum.Text))
@@ -347,9 +295,6 @@ namespace CSADataReport.Web
             {
                 model.QTOtherDeclareIncome = 0;
             }
-            //model.DeclareOperationTypeId = 3;
-            ////float fday= (float)dtReporte.DayOfYear;
-            //model.DeclareTypeId = 2;
             model.EditTime = DateTime.Parse(txbReportDate.Value);
             string strWhere="CompanyId="+currentUser.CompanyId+" and DeclareReportWeek="+model.DeclareReportWeek+" and DeclareReportYear="+model.DeclareReportYear;
             List<Model.DeclareDatas> list=new List<Model.DeclareDatas> ();
@@ -402,11 +347,6 @@ namespace CSADataReport.Web
                 }
             }
             
-            //if (intAddedRecord == 6)
-            //{
-            //    strMsg = "数据保存成功！";
-            //    btnReport.Enabled = true;
-            //}
             lblMsg.Text = strMsg;
             lblBallotTotal.Text = intBallotTotal.ToString();
             lblContainerTotal.Text = intContainerTotal.ToString();
@@ -415,7 +355,7 @@ namespace CSADataReport.Web
 
         protected void btnReport_Click(object sender, EventArgs e)
         {
-            currentUser = (Model.Users)Session["UserInfo"];
+            Model.Users currentUser = (Model.Users)Session["UserInfo"];
             if (ViewState["SavedRecordId"] != null)
             {
                 string strSavedRecordId = ViewState["SavedRecordId"].ToString();

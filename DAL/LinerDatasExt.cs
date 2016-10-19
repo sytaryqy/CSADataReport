@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using Maticsoft.DBUtility;
+using CSADataReport.DBUtility;
 
 namespace CSADataReport.DAL
 {

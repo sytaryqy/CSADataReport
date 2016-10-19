@@ -15,29 +15,12 @@ namespace CSADataReport.Web
         {
             if (!IsPostBack)
             {
-                ///*先清空原来数据集*/
-                //ReportViewer1.LocalReport.DataSources.Clear();
+                /*先清空原来数据集*/
                 ReportViewer1.ShowReportBody = false;
-                //判断用户是否已经登录
-                if (Session["UserInfo"] == null)
-                {
-                    //保存用户登录后跳转回来的地址
-                    Session["returnPage"] = this.Request.Url.PathAndQuery;
-                    Response.Clear();
-                    Response.Write("<script language=javascript>window.alert('您没有权限进入本页！\\n请登录或与管理员联系！');window.location='/UserLogin.aspx';</script>");
-                    Response.End();
-                }
-                else
-                {
-                    Model.Users currentUser = (Model.Users)Session["UserInfo"];
-                    //判断用户是否有访问报表的权限
-                    if (currentUser.U_UserRoles.Name == "普通用户")
-                    {
-                        Response.Clear();
-                        Response.Write("<script language=javascript>window.alert('您是普通用户！\\n普通用户没有权限进入本页！');window.location='/Main.aspx';</script>");
-                        Response.End();
-                    }
-                }
+
+                //estimate the user's login state
+                Common.CheckLogin.CheckUserRoleNotAllowed("普通用户");
+
             }
         }
 
@@ -251,11 +234,6 @@ namespace CSADataReport.Web
             int iBaseYear = DateTime.Parse(txbEndDate.Text).Year;
             int iBeginDate = Common.WeekOfYear.GetWeekOfYear(DateTime.Parse(txbBeginDate.Text));
             int iEndDate = Common.WeekOfYear.GetWeekOfYear(DateTime.Parse(txbEndDate.Text));
-            //int iLastYearSameTimeBeginDate = Common.WeekOfYear.GetWeekOfYear(DateTime.Parse(txbLastYearSameTimeBeginDate.Text));
-            //int iLastYearSameTimeEndDate = Common.WeekOfYear.GetWeekOfYear(DateTime.Parse(txbLastYearSameTimeEndDate.Text));
-            //int iLastMonthBeginDate = Common.WeekOfYear.GetWeekOfYear(DateTime.Parse(txbLastMonthBeginDate.Text));
-            //int iLastMonthEndDate = Common.WeekOfYear.GetWeekOfYear(DateTime.Parse(txbLastMonthEndDate.Text));
-            //string strLinerCondition = GetReportCondition();
             BLL.LinerDatas linerBll = new BLL.LinerDatas();
             DataSet ds = linerBll.GetLinerDatasReportingDataSet(iBaseYear, iBeginDate, iEndDate);
             return ds.Tables[0];

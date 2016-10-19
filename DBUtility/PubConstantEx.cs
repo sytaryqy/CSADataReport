@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Configuration;
-namespace Maticsoft.DBUtility
+namespace CSADataReport.DBUtility
 {
     
     public partial class PubConstant

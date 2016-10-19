@@ -6,4 +6,3 @@ D:\CSADataReport\DBUtility\bin\Debug\MySql.Data.dll
 D:\CSADataReport\DBUtility\bin\Debug\System.Data.SQLite.DLL
 D:\CSADataReport\DBUtility\obj\Debug\CSADataReport.DBUtility.dll
 D:\CSADataReport\DBUtility\obj\Debug\CSADataReport.DBUtility.pdb
-D:\CSADataReport\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache

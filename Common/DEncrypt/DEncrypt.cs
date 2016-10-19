@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;  
 using System.Text;
-namespace Maticsoft.Common.DEncrypt
+namespace CSADataReport.Common.DEncrypt
 {
 	/// <summary>
 	/// Encrypt 的摘要说明。

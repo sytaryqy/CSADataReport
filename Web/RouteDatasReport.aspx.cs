@@ -5,11 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using Maticsoft.Common;
 using log4net;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Text;
+using CSADataReport.Common;
 
 namespace CSADataReport.Web
 {
@@ -39,10 +39,7 @@ namespace CSADataReport.Web
                 //判断用户是否登录
                 if (Session["UserInfo"] == null)
                 {
-                    Session["returnPage"] = this.Request.Url.PathAndQuery;
-                    Response.Clear();
-                    Response.Write("<script language=javascript>window.alert('您没有权限进入本页！\\n请登录或与管理员联系！');window.location='/UserLogin.aspx';</script>");
-                    Response.End();
+                    Common.CheckLogin.ShowLoginPageAndReturn();
                 }
                 else
                 {

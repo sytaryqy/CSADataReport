@@ -21,14 +21,14 @@
             </tr>
             <tr>
                 <td style="font-size:small">
-                    欢迎：<asp:LinkButton ID="LinkButton1" PostBackUrl="~/UserPwdEdit.aspx"  runat="server"><%=currentUser.CnName %></asp:LinkButton>&nbsp;
+                    欢迎：<asp:LinkButton ID="LinkButton1" PostBackUrl="~/UserPwdEdit.aspx"  runat="server"><%=CSADataReport.Common.CheckLogin.SetUserObj.CnName %></asp:LinkButton>&nbsp;
                     &nbsp;<asp:LinkButton ID="LinkButton2" PostBackUrl="~/Ashx/Logout.ashx" runat="server">注销</asp:LinkButton>
                 </td>
                 <td style="font-size:small">
-                    所属公司：<%=currentUser.U_UserCompany.CompanyName %>
+                    所属公司：<%=CSADataReport.Common.CheckLogin.SetUserObj.U_UserCompany.CompanyName%>
                 </td>
                 <td style="font-size:small">
-                    用户组：<%=currentUser.U_UserRoles.Name %>
+                    用户组：<%=CSADataReport.Common.CheckLogin.SetUserObj.U_UserRoles.Name%>
                 </td>
             </tr>
             <tr>
@@ -44,7 +44,7 @@
             <td width="200" valign="middle">
             </td>
             <td align="center">
-                    <a style="font-size:large;" href="DeclareReport.aspx?CompanyId=<%=currentUser.U_UserCompany.Id %>" >报关数据填报(周报)</a>
+                    <a style="font-size:large;" href="DeclareReport.aspx?CompanyId=<%=CSADataReport.Common.CheckLogin.SetUserObj.U_UserCompany.Id %>" >报关数据填报(周报)</a>
             </td>
                 <td width="200"  valign="middle">
                 </td>

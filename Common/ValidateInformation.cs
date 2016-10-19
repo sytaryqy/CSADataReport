@@ -5,9 +5,9 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 using System.Text;
-using Maticsoft.DBUtility;
+using CSADataReport.DBUtility;
 
-namespace Maticsoft.Common
+namespace CSADataReport.Common
 {
     public class ValidateInformation
     {

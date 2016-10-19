@@ -4,7 +4,7 @@ using System.Web;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace Maticsoft.Common
+namespace CSADataReport.Common
 {
     public class MD5Helper
     {

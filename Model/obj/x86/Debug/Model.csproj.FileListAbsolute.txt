@@ -1,0 +1,5 @@
+D:\CSADataReport\Model\bin\x86\Debug\CSADataReport.Model.dll
+D:\CSADataReport\Model\bin\x86\Debug\CSADataReport.Model.pdb
+D:\CSADataReport\Model\obj\x86\Debug\Model.csprojResolveAssemblyReference.cache
+D:\CSADataReport\Model\obj\x86\Debug\CSADataReport.Model.dll
+D:\CSADataReport\Model\obj\x86\Debug\CSADataReport.Model.pdb

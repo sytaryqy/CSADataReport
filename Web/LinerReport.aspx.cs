@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using Maticsoft.Common;
+using CSADataReport.Common;
 using log4net;
 
 namespace CSADataReport.Web
@@ -23,10 +23,7 @@ namespace CSADataReport.Web
             {
                 if (Session["UserInfo"] == null)
                 {
-                    Session["returnPage"] = this.Request.Url.PathAndQuery;
-                    Response.Clear();
-                    Response.Write("<script language=javascript>window.alert('您没有权限进入本页！\\n请登录或与管理员联系！');window.location='/UserLogin.aspx';</script>");
-                    Response.End();
+                    Common.CheckLogin.ShowLoginPageAndReturn();
                 }
                 else
                 {
@@ -159,22 +156,7 @@ namespace CSADataReport.Web
             GridViewRow r = x1.Parent.Parent as GridViewRow;
             dataTable = this.GetDataTable();
             dataTable.Rows[r.RowIndex]["linerCompany"] = x1.SelectedValue;
-            //string s = x1.SelectedValue;
-            //DropDownList x2 = r.FindControl("x2") as DropDownList;
-            //x2.DataSource = new BLL.Lines().GetList("RouteId=" + s);
-            //x2.DataTextField = "Name";
-            //x2.DataValueField = "Id";
-            //x2.DataBind();
-            //dataTable.Rows[r.RowIndex]["steelKind"] = x2.SelectedValue;
             ViewState["dt"] = dataTable;
-            //ViewState["ReportDate"] = txbReportDate.Value.Trim();
-            //this.Bind(false);
-            //DropDownList x1 = sender as DropDownList;
-            //GridViewRow r = x1.Parent.Parent as GridViewRow;
-            //dataTable = this.GetDataTable();
-            //dataTable.Rows[r.RowIndex]["usage"] = x1.SelectedValue;
-            //ViewState["dt"] = dataTable;
-            //this.Bind(false);
         }
 
         //protected void x2_TextChanged(object sender, EventArgs e)
@@ -288,16 +270,6 @@ namespace CSADataReport.Web
                         return;
 
                     }
-                    //try
-                    //{
-                    //    model.Id= linerBll.Add(model);
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    lblMsg.Text =strLinerComany+ "的数据保存失败";
-                    //    log.Error(strLinerComany+ "的数据保存失败"+"错误信息："+ex.Message);
-                    //    return;
-                    //}
                     listTemp.Add(model);
                     iShipTotal += model.ProxyShipCount;
                     iContainerTotal += model.ProxyContainerCount;

@@ -82,13 +82,15 @@ namespace CSADataReport.BLL
         public List<CSADataReport.Model.RouteDatas> LoadRecentDatas(string strCompanyId)
         {
             List<Model.RouteDatas> routeDatasList = null; ;
-            if (Maticsoft.Common.DataCache.GetCache("RouteDatasTemp" + strCompanyId) != null)
+            if (CSADataReport.Common.DataCache.GetCache("RouteDatasTemp" + strCompanyId) != null)
             {
                 byte[] streamBufferWrite = new byte[1024 * 10];
-                streamBufferWrite = (byte[])Maticsoft.Common.DataCache.GetCache("RouteDatasTemp" + strCompanyId);
+                streamBufferWrite = (byte[])CSADataReport.Common.DataCache.GetCache("RouteDatasTemp" + strCompanyId);
                 using (MemoryStream streamTempWrite = new MemoryStream(streamBufferWrite))
                 {
                     BinaryFormatter bf = new BinaryFormatter();
+
+                    //将数据反序列化后转化成实体
                     routeDatasList = bf.Deserialize(streamTempWrite) as List<Model.RouteDatas>;
                 }
             }
@@ -122,7 +124,7 @@ namespace CSADataReport.BLL
                 //Stream s = File.Open(strPath, FileMode.Create);
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Serialize(streamTempRead, listRouteDatas);
-                Maticsoft.Common.DataCache.SetCache("RouteDatasTemp"+strCompanyId, streamBufferRead, DateTime.Now.AddDays(31), TimeSpan.Zero);
+                CSADataReport.Common.DataCache.SetCache("RouteDatasTemp"+strCompanyId, streamBufferRead, DateTime.Now.AddDays(31), TimeSpan.Zero);
             }
         }
 

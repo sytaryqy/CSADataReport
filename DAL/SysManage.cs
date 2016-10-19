@@ -3,7 +3,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using Maticsoft.Model;
-using Maticsoft.DBUtility;
+using CSADataReport.DBUtility;
 namespace Maticsoft.DAL
 {
 	/// <summary>

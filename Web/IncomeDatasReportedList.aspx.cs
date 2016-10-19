@@ -11,7 +11,11 @@ namespace CSADataReport.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+                //judge the user's login state
+                if (Session["UserInfo"] == null)
+                {
+                    Common.CheckLogin.ShowLoginPageAndReturn();
+                }
         }
     }
 }

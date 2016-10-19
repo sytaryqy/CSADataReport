@@ -4,26 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>收入数据管理</title>
 </head>
 <body id="tBody">
+<div>
+    <a href="DatasManageMain.aspx">返回</a>
+</div>
     <form id="form1" runat="server">
     <div align="center">
     &nbsp;
     <h2>收入数据管理</h2>
-    <div>
-        <asp:Panel ID="panMenu" runat="server" Enabled="False" Visible="False">
-            <asp:DropDownList ID="ddlBusnissType" runat="server">
-                <asp:ListItem Value="DeclareDatas">报关数据</asp:ListItem>
-                <asp:ListItem Value="LinerDatas">班轮货量</asp:ListItem>
-                <asp:ListItem Value="LinerIncomeDatas">班轮收入</asp:ListItem>
-                <asp:ListItem Value="RouteDatas">航线数据</asp:ListItem>
-                <asp:ListItem Value="IncomeDatas">收入数据</asp:ListItem>
-            </asp:DropDownList>
-        </asp:Panel>
-        </div>
         <div>
-        &nbsp;</div>
+        &nbsp;
+        </div>
         <span>
         <label for="txbBeginYear">查询起始年：</label>
         <asp:TextBox ID="txbBeginYear" runat="server" TextMode="Number" CssClass="btn"></asp:TextBox>
@@ -43,7 +36,8 @@
         </asp:DropDownList>
         </span>
         <div>
-        &nbsp;</div>
+        &nbsp;
+        </div>
         <div>
             <asp:Button ID="btnGetDatas" runat="server" Text="获取数据" 
                 onclick="btnGetDatas_Click" />
@@ -58,7 +52,7 @@
             DataObjectTypeName="CSADataReport.Model.IncomeDatas" InsertMethod="Add" 
             UpdateMethod="Update">
             <SelectParameters>
-                <asp:Parameter Name="strWhere" Type="String" DefaultValue=" " />
+                <asp:Parameter Name="strWhere" Type="String" DefaultValue="ReportYear = 0" />
             </SelectParameters>
         
         </asp:ObjectDataSource>
@@ -72,7 +66,7 @@
                 <tr style="background-color: #FFFFFF;color: #284775;" align="center" >
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="删除" />
-                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="编辑" />
+                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="编辑" Enabled="false" />
                     </td>
                     <td>
                         <asp:Label ID="IdLabel" runat="server" 
@@ -134,7 +128,7 @@
             <EditItemTemplate>
                 <tr style="background-color: #999999;" align="center">
                     <td>
-                        <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="更新" />
+                        <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="更新" Enabled="false" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="取消" />
                     </td>
                     <td>
@@ -208,11 +202,11 @@
             <InsertItemTemplate>
                 <tr style="" align="center">
                     <td>
-                        <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="插入" />
+                        <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="插入" Enabled="false" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="清除" />
                     </td>
                     <td>
-                        <asp:TextBox ID="IdTextBox" runat="server" 
+                        <asp:TextBox ID="IdTextBox" runat="server"  Width="25px"
                             Text='<%# Bind("Id") %>' />
                     </td>
                     <td>
@@ -220,39 +214,39 @@
                             Text='<%# Bind("D_UserCompany.CompanyName") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="CompanyIdTextBox" runat="server" 
+                        <asp:TextBox ID="CompanyIdTextBox" runat="server" Width="50px"
                             Text='<%# Bind("CompanyId") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="ReportWeekTextBox" runat="server" 
+                        <asp:TextBox ID="ReportWeekTextBox" runat="server" Width="50px"
                             Text='<%# Bind("ReportWeek") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="ReportYearTextBox" runat="server" 
+                        <asp:TextBox ID="ReportYearTextBox" runat="server" Width="50px"
                             Text='<%# Bind("ReportYear") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="ContainerIncomeTextBox" runat="server" 
+                        <asp:TextBox ID="ContainerIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("ContainerIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="BulkCargoIncomeTextBox" runat="server" 
+                        <asp:TextBox ID="BulkCargoIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("BulkCargoIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="DeclareIncomeTextBox" runat="server" 
+                        <asp:TextBox ID="DeclareIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("DeclareIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="TotalContainerIncomeTextBox" runat="server" 
+                        <asp:TextBox ID="TotalContainerIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("TotalContainerIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="TotalBulkCargoIncomeTextBox" runat="server" 
+                        <asp:TextBox ID="TotalBulkCargoIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("TotalBulkCargoIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="TotalDeclareIncomeTextBox" runat="server" 
+                        <asp:TextBox ID="TotalDeclareIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("TotalDeclareIncome") %>' />
                     </td>
                     <td>
@@ -274,7 +268,7 @@
                 <tr style="background-color: #E0FFFF;color: #333333;" align="center">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="删除" />
-                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="编辑" />
+                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="编辑" Enabled="false" />
                     </td>
                     <td>
                         <asp:Label ID="IdLabel" runat="server" 
@@ -342,7 +336,7 @@
                                     <th runat="server">
                                     </th>
                                     <th runat="server">
-                                        Id</th>
+                                        编号</th>
                                     <th runat="server">
                                         口岸名称</th>
                                     <th runat="server">
@@ -368,7 +362,7 @@
                                     <th runat="server">
                                         添加时间</th>
                                     <th runat="server">
-                                        修改时间</th>
+                                        数据时间</th>
                                     
                                 </tr>
                                 <tr ID="itemPlaceholder" runat="server">
@@ -396,7 +390,7 @@
                 <tr style="background-color: #E2DED6;font-weight: bold;color: #333333;" align="center">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="删除" />
-                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="编辑" />
+                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="编辑" Enabled ="false" />
                     </td>
                     <td>
                         <asp:Label ID="IdLabel" runat="server" 

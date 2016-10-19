@@ -5,36 +5,32 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using Maticsoft.Common;
+using CSADataReport.Common;
 
 namespace CSADataReport.Web
 {
     public partial class IncomeDatasReport : System.Web.UI.Page
     {
-        protected Model.Users currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
                 if (Session["UserInfo"] == null)
                 {
-                    Session["returnPage"] = this.Request.Url.PathAndQuery;
-                    Response.Clear();
-                    Response.Write("<script language=javascript>window.alert('您没有权限进入本页！\\n请登录或与管理员联系！');window.location='/UserLogin.aspx';</script>");
-                    Response.End();
+                    Common.CheckLogin.ShowLoginPageAndReturn();
                 }
                 else
                 {
                     txbReportDate.Value = DateTime.Today.ToString("yyyy-MM");
-                    currentUser = (Model.Users)Session["UserInfo"];
+                    Model.Users currentUser = (Model.Users)Session["UserInfo"];
                     BLL.IncomeDatas ibll = new BLL.IncomeDatas();
                     string strDate = txbReportDate.Value;
                     DateTime dateInput = DateTime.Parse(strDate);
                     int intReportYear= dateInput.Year;
                     DateTime date= dateInput.AddDays(14);
-                    int intReportWeek=  Common.WeekOfYear.GetWeekOfYear(date);
+                    int intReportWeek = Common.WeekOfYear.GetWeekOfYear(date);
                     //int intReportMonth = DateTime.Today.Month;
-                    int intLastWeek =Common.WeekOfYear.GetWeekOfYear( date.AddMonths( - 1));
+                    int intLastWeek = Common.WeekOfYear.GetWeekOfYear(date.AddMonths(-1));
                     DataSet ds = ibll.GetList("CompanyId=" + currentUser.CompanyId + " and " + "ReportYear=" + intReportYear + " and " + "ReportWeek=" + intLastWeek);
                     if (ds != null && ds.Tables[0].Rows.Count > 0)
                     {
@@ -73,7 +69,7 @@ namespace CSADataReport.Web
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            currentUser = (Model.Users)Session["UserInfo"];
+            Model.Users currentUser = (Model.Users)Session["UserInfo"];
             Model.IncomeDatas model = new Model.IncomeDatas();
 
             //计算集装箱货代收入是否匹配
@@ -191,7 +187,7 @@ namespace CSADataReport.Web
 
         protected void btnReport_Click(object sender, EventArgs e)
         {
-            currentUser = (Model.Users)Session["UserInfo"];
+            Model.Users currentUser = (Model.Users)Session["UserInfo"];
             Model.IncomeDatas model = new Model.IncomeDatas();
             string strDate = txbReportDate.Value;
             //DateTime date = DateTime.Parse(strDate);

@@ -126,7 +126,7 @@
                 </td>
             </tr>
             <tr>
-            <td colspan="2" style="text-align:right">所属口岸：</td><td colspan="3" style="text-align:left"><%=currentUser.U_UserCompany.CompanyName %></td>
+            <td colspan="2" style="text-align:right">所属口岸：</td><td colspan="3" style="text-align:left"><%=CSADataReport.Common.CheckLogin.SetUserObj.U_UserCompany.CompanyName%></td>
         </tr>
         </tbody>
     </table>

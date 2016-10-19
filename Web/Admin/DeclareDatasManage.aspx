@@ -308,75 +308,75 @@
                             Text='<%# Bind("CompanyId") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFOuterDeclareBallotTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFOuterDeclareBallotTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFOuterDeclareBallot") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFSelfDeclareBallotTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFSelfDeclareBallotTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFSelfDeclareBallot") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFOtherDeclareBallotTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFOtherDeclareBallotTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFOtherDeclareBallot") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTOuterDeclareBallotTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTOuterDeclareBallotTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTOuterDeclareBallot") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTSelfDeclareBallotTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTSelfDeclareBallotTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTSelfDeclareBallot") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTOtherDeclareBallotTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTOtherDeclareBallotTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTOtherDeclareBallot") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFOuterDeclareContainerTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFOuterDeclareContainerTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFOuterDeclareContainer") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFSelfDeclareContainerTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFSelfDeclareContainerTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFSelfDeclareContainer") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFOtherDeclareContainerTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFOtherDeclareContainerTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFOtherDeclareContainer") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTOuterDeclareContainerTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTOuterDeclareContainerTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTOuterDeclareContainer") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTSelfDeclareContainerTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTSelfDeclareContainerTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTSelfDeclareContainer") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTOtherDeclareContainerTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTOtherDeclareContainerTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTOtherDeclareContainer") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFOuterDeclareIncomeTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFOuterDeclareIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFOuterDeclareIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFSelfDeclareIncomeTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFSelfDeclareIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFSelfDeclareIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="GFOtherDeclareIncomeTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="GFOtherDeclareIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("GFOtherDeclareIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTOuterDeclareIncomeTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTOuterDeclareIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTOuterDeclareIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTSelfDeclareIncomeTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTSelfDeclareIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTSelfDeclareIncome") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="QTOtherDeclareIncomeTextBox" runat="server" Width="100px"
+                        <asp:TextBox ID="QTOtherDeclareIncomeTextBox" runat="server" Width="75px"
                             Text='<%# Bind("QTOtherDeclareIncome") %>' />
                     </td>
                     <td>
